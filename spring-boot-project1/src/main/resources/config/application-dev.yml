@@ -1,0 +1,15 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /project1
+logging:
+  level:
+    root: info
+    org.zhouhy.springboot.project1: warn
+  file:
+    name: logs/system.log
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

@@ -1,0 +1,14 @@
+2020-03-13 07:19:36.442  INFO 12996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-03-13 07:19:36.457  INFO 12996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 07:19:36.457  INFO 12996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-13 07:19:36.564  INFO 12996 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-03-13 07:19:36.565  INFO 12996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1443 ms
+2020-03-13 07:19:36.756  INFO 12996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 07:19:36.925  INFO 12996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-03-13 07:37:12.280  INFO 7916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-03-13 07:37:12.295  INFO 7916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-13 07:37:12.296  INFO 7916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-13 07:37:12.413  INFO 7916 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-03-13 07:37:12.414  INFO 7916 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1419 ms
+2020-03-13 07:37:12.603  INFO 7916 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-13 07:37:12.785  INFO 7916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
