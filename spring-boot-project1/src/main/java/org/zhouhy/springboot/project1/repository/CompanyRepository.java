@@ -13,10 +13,10 @@ public interface CompanyRepository extends JpaRepository<Company,String> {
 
     //原生sql语句查询
     @Query(value="select * from t_company where company_name=?1",nativeQuery = true)
-    List<Company> findByNativeSQL(String companyName);
+    List<Company> findByCompanyName(String companyName);
 
     @Query(value="select * from t_company where company_name like '%?1%'",nativeQuery = true)
-    List<Company> findByNativeSQL1(String companyName);
+    List<Company> findByCompanyNameLike(String companyName);
 
     //原生sql语句操作（涉及到数据变动的，如删除和更新，必须加注解@Modifying）
     @Modifying
