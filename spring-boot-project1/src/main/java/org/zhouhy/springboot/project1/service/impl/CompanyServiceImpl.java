@@ -1,6 +1,7 @@
 package org.zhouhy.springboot.project1.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.zhouhy.springboot.project1.domain.Company;
 import org.zhouhy.springboot.project1.repository.CompanyRepository;
 import org.zhouhy.springboot.project1.service.CompanyService;
@@ -8,6 +9,7 @@ import org.zhouhy.springboot.project1.service.CompanyService;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@Service("companyService")
 public class CompanyServiceImpl implements CompanyService {
 
     @Autowired
