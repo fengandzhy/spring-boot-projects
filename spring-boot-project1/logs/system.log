@@ -1,14 +1,17 @@
-2020-03-13 07:19:36.442  INFO 12996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-03-13 07:19:36.457  INFO 12996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-13 07:19:36.457  INFO 12996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-03-13 07:19:36.564  INFO 12996 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-03-13 07:19:36.565  INFO 12996 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1443 ms
-2020-03-13 07:19:36.756  INFO 12996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-13 07:19:36.925  INFO 12996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-03-13 07:37:12.280  INFO 7916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-03-13 07:37:12.295  INFO 7916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-13 07:37:12.296  INFO 7916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-03-13 07:37:12.413  INFO 7916 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-03-13 07:37:12.414  INFO 7916 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1419 ms
-2020-03-13 07:37:12.603  INFO 7916 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-13 07:37:12.785  INFO 7916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-15 18:31:33.516  INFO 3248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-15 18:31:33.537  INFO 3248 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 JPA repository interfaces.
+2020-04-15 18:31:33.949  INFO 3248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-15 18:31:33.957  INFO 3248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-15 18:31:33.958  INFO 3248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-15 18:31:34.134  INFO 3248 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-15 18:31:34.135  INFO 3248 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1007 ms
+2020-04-15 18:31:34.310  INFO 3248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-15 18:31:34.380  INFO 3248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-15 18:31:34.497  INFO 3248 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-15 18:31:34.637  INFO 3248 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-15 18:31:34.728  INFO 3248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-15 18:31:34.885  INFO 3248 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-15 18:31:34.891  INFO 3248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-15 18:31:34.925  WARN 3248 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-15 18:31:35.010  INFO 3248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-15 18:31:35.150  INFO 3248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
