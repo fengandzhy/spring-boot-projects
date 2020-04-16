@@ -1,282 +1,126 @@
-2020-04-16 03:27:52.193  INFO 14888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 03:27:52.224  INFO 14888 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 JPA repository interfaces.
-2020-04-16 03:27:52.709  INFO 14888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 03:27:52.724  INFO 14888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 03:27:52.724  INFO 14888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 03:27:52.896  INFO 14888 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 03:27:52.896  INFO 14888 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1187 ms
-2020-04-16 03:27:53.099  INFO 14888 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 03:27:53.177  INFO 14888 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 03:27:53.380  INFO 14888 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 03:27:53.537  INFO 14888 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 03:27:53.693  INFO 14888 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 03:27:53.834  WARN 14888 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 03:27:54.365  INFO 14888 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 03:27:54.380  INFO 14888 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 03:27:54.412  WARN 14888 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 03:27:54.536  INFO 14888 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 03:27:54.646  WARN 14888 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 03:27:54.740  INFO 14888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:27:55.314  INFO 14596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:27:55.384  INFO 14596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 1 JPA repository interfaces.
-2020-04-16 04:27:55.830  INFO 14596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:27:55.837  INFO 14596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:27:55.838  INFO 14596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:27:56.006  INFO 14596 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:27:56.006  INFO 14596 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1161 ms
-2020-04-16 04:27:56.176  INFO 14596 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:27:56.248  INFO 14596 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:27:56.395  INFO 14596 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:27:56.514  INFO 14596 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:27:56.615  INFO 14596 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:27:56.738  WARN 14596 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:27:57.147  INFO 14596 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:27:57.155  INFO 14596 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:27:57.473  WARN 14596 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:27:57.569  INFO 14596 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:27:57.663  WARN 14596 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 04:27:57.743  INFO 14596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:33:42.165  INFO 17340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:33:42.222  INFO 17340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
-2020-04-16 04:33:42.654  INFO 17340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:33:42.662  INFO 17340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:33:42.662  INFO 17340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:33:42.825  INFO 17340 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:33:42.826  INFO 17340 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1132 ms
-2020-04-16 04:33:42.993  INFO 17340 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:33:43.073  INFO 17340 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:33:43.223  INFO 17340 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:33:43.341  INFO 17340 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:33:43.437  INFO 17340 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:33:43.583  WARN 17340 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:33:44.041  INFO 17340 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:33:44.049  INFO 17340 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:33:44.368  WARN 17340 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:33:44.460  INFO 17340 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:33:44.558  WARN 17340 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 04:33:44.643  INFO 17340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:39:32.311  INFO 10676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:39:32.368  INFO 10676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
-2020-04-16 04:39:32.802  INFO 10676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:39:32.810  INFO 10676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:39:32.810  INFO 10676 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:39:32.975  INFO 10676 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:39:32.975  INFO 10676 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1134 ms
-2020-04-16 04:39:33.148  INFO 10676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:39:33.218  INFO 10676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:39:33.364  INFO 10676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:39:33.484  INFO 10676 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:39:33.583  INFO 10676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:39:33.707  WARN 10676 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:39:34.121  INFO 10676 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:39:34.129  INFO 10676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:39:34.419  WARN 10676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:39:34.511  INFO 10676 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:39:34.606  WARN 10676 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 04:39:34.685  INFO 10676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:44:20.683  INFO 16960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:44:20.740  INFO 16960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
-2020-04-16 04:44:21.177  INFO 16960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:44:21.185  INFO 16960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:44:21.186  INFO 16960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:44:21.350  INFO 16960 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:44:21.350  INFO 16960 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1148 ms
-2020-04-16 04:44:21.524  INFO 16960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:44:21.593  INFO 16960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:44:21.738  INFO 16960 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:44:21.857  INFO 16960 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:44:21.955  INFO 16960 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:44:22.082  WARN 16960 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:44:22.505  INFO 16960 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:44:22.511  INFO 16960 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:44:22.816  WARN 16960 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:44:22.911  INFO 16960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:44:23.009  WARN 16960 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 04:44:23.109  INFO 16960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:45:53.112  INFO 16024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:45:53.172  INFO 16024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 1 JPA repository interfaces.
-2020-04-16 04:45:53.610  INFO 16024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:45:53.617  INFO 16024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:45:53.618  INFO 16024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:45:53.781  INFO 16024 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:45:53.781  INFO 16024 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1170 ms
-2020-04-16 04:45:53.951  INFO 16024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:45:54.022  INFO 16024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:45:54.173  INFO 16024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:45:54.292  INFO 16024 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:45:54.391  INFO 16024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:45:54.519  WARN 16024 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:45:54.941  INFO 16024 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:45:54.948  INFO 16024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:45:55.258  WARN 16024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:45:55.350  INFO 16024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:45:55.451  WARN 16024 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 04:45:55.533  INFO 16024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:49:44.275  INFO 3436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:49:44.342  INFO 3436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 1 JPA repository interfaces.
-2020-04-16 04:49:44.878  INFO 3436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:49:44.887  INFO 3436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:49:44.887  INFO 3436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:49:45.178  INFO 3436 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:49:45.178  INFO 3436 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1560 ms
-2020-04-16 04:49:45.551  INFO 3436 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:49:45.690  INFO 3436 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:49:45.989  INFO 3436 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:49:46.192  INFO 3436 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:49:46.382  INFO 3436 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:49:46.674  WARN 3436 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:49:47.904  INFO 3436 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:49:47.931  INFO 3436 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:49:48.623  WARN 3436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:49:48.978  INFO 3436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:49:49.613  INFO 3436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:51:04.444  INFO 16440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:51:04.508  INFO 16440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 1 JPA repository interfaces.
-2020-04-16 04:51:04.962  INFO 16440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:51:04.970  INFO 16440 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:51:04.970  INFO 16440 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:51:05.139  INFO 16440 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:51:05.139  INFO 16440 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1180 ms
-2020-04-16 04:51:05.311  INFO 16440 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:51:05.401  INFO 16440 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:51:05.618  INFO 16440 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:51:05.769  INFO 16440 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:51:05.894  INFO 16440 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:51:06.033  WARN 16440 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:51:06.501  INFO 16440 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:51:06.509  INFO 16440 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:51:06.818  WARN 16440 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:51:06.935  INFO 16440 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:51:07.099  INFO 16440 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:57:22.326  INFO 868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 04:57:22.383  INFO 868 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
-2020-04-16 04:57:22.818  INFO 868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 04:57:22.825  INFO 868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 04:57:22.826  INFO 868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 04:57:22.989  INFO 868 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 04:57:22.989  INFO 868 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1141 ms
-2020-04-16 04:57:23.156  INFO 868 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 04:57:23.225  INFO 868 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 04:57:23.369  INFO 868 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 04:57:23.488  INFO 868 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 04:57:23.589  INFO 868 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 04:57:23.711  WARN 868 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 04:57:24.125  INFO 868 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 04:57:24.133  INFO 868 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 04:57:24.418  WARN 868 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 04:57:24.511  INFO 868 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 04:57:24.604  WARN 868 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 04:57:24.687  INFO 868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 04:57:39.839  INFO 868 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-16 04:57:39.840  INFO 868 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-16 04:57:39.846  INFO 868 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2020-04-16 17:55:18.157  INFO 9120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 17:55:18.378  INFO 9120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94ms. Found 1 JPA repository interfaces.
-2020-04-16 17:55:19.150  INFO 9120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 17:55:19.167  INFO 9120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 17:55:19.167  INFO 9120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 17:55:19.528  INFO 9120 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 17:55:19.529  INFO 9120 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2164 ms
-2020-04-16 17:55:19.886  INFO 9120 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 17:55:20.027  INFO 9120 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 17:55:20.431  INFO 9120 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 17:55:20.650  INFO 9120 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 17:55:20.836  INFO 9120 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 17:55:21.092  WARN 9120 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 17:55:21.718  INFO 9120 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 17:55:21.729  INFO 9120 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 17:55:22.152  WARN 9120 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 17:55:22.304  INFO 9120 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 17:55:22.463  WARN 9120 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 17:55:22.677  INFO 9120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 17:56:07.693  INFO 9120 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-16 17:56:07.693  INFO 9120 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-16 17:56:07.702  INFO 9120 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2020-04-16 18:00:48.887  INFO 16872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 18:00:48.956  INFO 16872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 1 JPA repository interfaces.
-2020-04-16 18:00:49.713  INFO 16872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 18:00:49.727  INFO 16872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 18:00:49.728  INFO 16872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 18:00:49.981  INFO 16872 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 18:00:49.981  INFO 16872 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1769 ms
-2020-04-16 18:00:50.227  INFO 16872 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 18:00:50.333  INFO 16872 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 18:00:50.547  INFO 16872 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 18:00:50.735  INFO 16872 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 18:00:50.879  INFO 16872 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 18:00:51.040  WARN 16872 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 18:00:51.591  INFO 16872 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 18:00:51.601  INFO 16872 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 18:00:52.021  WARN 16872 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 18:00:52.162  INFO 16872 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 18:00:52.306  WARN 16872 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 18:00:52.408  INFO 16872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 18:00:52.502  INFO 16872 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-16 18:00:52.502  INFO 16872 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-16 18:00:52.512  INFO 16872 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2020-04-16 18:07:38.030  INFO 404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 18:07:38.097  INFO 404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 1 JPA repository interfaces.
-2020-04-16 18:07:38.671  INFO 404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 18:07:38.680  INFO 404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 18:07:38.680  INFO 404 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 18:07:38.874  INFO 404 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 18:07:38.875  INFO 404 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1497 ms
-2020-04-16 18:07:39.080  INFO 404 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 18:07:39.162  INFO 404 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 18:07:39.343  INFO 404 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 18:07:39.504  INFO 404 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 18:07:39.635  INFO 404 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 18:07:39.813  WARN 404 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 18:07:40.309  INFO 404 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 18:07:40.317  INFO 404 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 18:07:40.686  WARN 404 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 18:07:40.803  INFO 404 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 18:07:40.945  WARN 404 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 18:07:41.043  INFO 404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 18:07:47.600  INFO 404 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-16 18:07:47.600  INFO 404 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-16 18:07:47.609  INFO 404 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2020-04-16 18:09:50.442  INFO 13724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 18:09:50.511  INFO 13724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 1 JPA repository interfaces.
-2020-04-16 18:09:51.101  INFO 13724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 18:09:51.114  INFO 13724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 18:09:51.114  INFO 13724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 18:09:51.314  INFO 13724 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 18:09:51.314  INFO 13724 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1489 ms
-2020-04-16 18:09:51.496  INFO 13724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 18:09:51.583  INFO 13724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 18:09:51.779  INFO 13724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 18:09:51.928  INFO 13724 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 18:09:52.077  INFO 13724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 18:09:52.267  WARN 13724 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 18:09:52.760  INFO 13724 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 18:09:52.768  INFO 13724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 18:09:53.117  WARN 13724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 18:09:53.234  INFO 13724 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 18:09:53.399  WARN 13724 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 18:09:53.508  INFO 13724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 18:10:01.807  INFO 13724 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-16 18:10:01.808  INFO 13724 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-16 18:10:01.819  INFO 13724 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
-2020-04-16 18:11:50.283  INFO 15204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-04-16 18:11:50.360  INFO 15204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 1 JPA repository interfaces.
-2020-04-16 18:11:50.949  INFO 15204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
-2020-04-16 18:11:50.957  INFO 15204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-16 18:11:50.957  INFO 15204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-16 18:11:51.161  INFO 15204 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
-2020-04-16 18:11:51.161  INFO 15204 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1510 ms
-2020-04-16 18:11:51.395  INFO 15204 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-04-16 18:11:51.494  INFO 15204 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
-2020-04-16 18:11:51.704  INFO 15204 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-04-16 18:11:51.878  INFO 15204 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-04-16 18:11:52.022  INFO 15204 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2020-04-16 18:11:52.185  WARN 15204 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
-2020-04-16 18:11:52.671  INFO 15204 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-04-16 18:11:52.679  INFO 15204 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-04-16 18:11:53.060  WARN 15204 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-04-16 18:11:53.204  INFO 15204 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-16 18:11:53.325  WARN 15204 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-04-16 18:11:53.422  INFO 15204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
-2020-04-16 18:11:58.141  INFO 15204 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-16 18:11:58.142  INFO 15204 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-16 18:11:58.150  INFO 15204 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-04-17 06:24:45.363  INFO 3616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-17 06:24:45.458  INFO 3616 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 1 JPA repository interfaces.
+2020-04-17 06:24:46.202  INFO 3616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-17 06:24:46.216  INFO 3616 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 06:24:46.217  INFO 3616 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-17 06:24:46.614  INFO 3616 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-17 06:24:46.615  INFO 3616 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2263 ms
+2020-04-17 06:24:46.876  INFO 3616 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-17 06:24:47.055  INFO 3616 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-17 06:24:47.603  INFO 3616 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-17 06:24:47.947  INFO 3616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 06:24:48.114  INFO 3616 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-17 06:24:48.359  WARN 3616 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2020-04-17 06:24:49.520  INFO 3616 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-17 06:24:49.533  INFO 3616 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-17 06:24:50.031  WARN 3616 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-17 06:24:50.209  INFO 3616 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 06:24:50.459  INFO 3616 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-17 06:25:18.499  INFO 3616 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 06:25:18.499  INFO 3616 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 06:25:18.514  INFO 3616 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-04-17 06:32:11.885  INFO 9792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-17 06:32:11.961  INFO 9792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 1 JPA repository interfaces.
+2020-04-17 06:32:12.659  INFO 9792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-17 06:32:12.673  INFO 9792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 06:32:12.674  INFO 9792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-17 06:32:12.930  INFO 9792 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-17 06:32:12.931  INFO 9792 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1770 ms
+2020-04-17 06:32:13.234  INFO 9792 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-17 06:32:13.351  INFO 9792 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-17 06:32:13.552  INFO 9792 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-17 06:32:13.707  INFO 9792 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 06:32:13.896  INFO 9792 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-17 06:32:14.130  WARN 9792 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2020-04-17 06:32:14.949  INFO 9792 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-17 06:32:14.975  INFO 9792 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-17 06:32:15.515  WARN 9792 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-17 06:32:15.659  INFO 9792 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 06:32:16.026  INFO 9792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-17 06:32:24.809  INFO 9792 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 06:32:24.810  INFO 9792 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 06:32:24.818  INFO 9792 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-04-17 06:36:57.643  INFO 18416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-17 06:36:57.716  INFO 18416 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 1 JPA repository interfaces.
+2020-04-17 06:36:58.443  INFO 18416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-17 06:36:58.454  INFO 18416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 06:36:58.454  INFO 18416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-17 06:36:58.721  INFO 18416 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-17 06:36:58.722  INFO 18416 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1827 ms
+2020-04-17 06:36:59.006  INFO 18416 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-17 06:36:59.156  INFO 18416 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-17 06:36:59.389  INFO 18416 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-17 06:36:59.531  INFO 18416 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 06:36:59.707  INFO 18416 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-17 06:36:59.926  WARN 18416 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2020-04-17 06:37:00.653  INFO 18416 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-17 06:37:00.672  INFO 18416 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-17 06:37:01.152  WARN 18416 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-17 06:37:01.296  INFO 18416 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 06:37:01.583  INFO 18416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-17 06:37:25.187  INFO 18416 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 06:37:25.187  INFO 18416 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 06:37:25.198  INFO 18416 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-04-17 06:40:31.069  INFO 10388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-17 06:40:31.193  INFO 10388 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110ms. Found 1 JPA repository interfaces.
+2020-04-17 06:40:31.929  INFO 10388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-17 06:40:31.939  INFO 10388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 06:40:31.939  INFO 10388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-17 06:40:32.231  INFO 10388 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-17 06:40:32.231  INFO 10388 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1958 ms
+2020-04-17 06:40:32.460  INFO 10388 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-17 06:40:32.574  INFO 10388 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-17 06:40:32.771  INFO 10388 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-17 06:40:32.986  INFO 10388 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 06:40:33.204  INFO 10388 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-17 06:40:33.448  WARN 10388 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2020-04-17 06:40:34.205  INFO 10388 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-17 06:40:34.214  INFO 10388 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-17 06:40:34.713  WARN 10388 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-17 06:40:34.860  INFO 10388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 06:40:35.157  INFO 10388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-17 06:40:59.696  INFO 10388 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 06:40:59.697  INFO 10388 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 06:40:59.707  INFO 10388 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-04-17 06:46:34.944  INFO 18596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-17 06:46:35.039  INFO 18596 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83ms. Found 1 JPA repository interfaces.
+2020-04-17 06:46:35.883  INFO 18596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-17 06:46:35.894  INFO 18596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 06:46:35.895  INFO 18596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-17 06:46:36.175  INFO 18596 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-17 06:46:36.176  INFO 18596 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2050 ms
+2020-04-17 06:46:36.405  INFO 18596 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-17 06:46:36.550  INFO 18596 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-17 06:46:36.793  INFO 18596 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-17 06:46:36.969  INFO 18596 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 06:46:37.142  INFO 18596 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-17 06:46:37.327  WARN 18596 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2020-04-17 06:46:37.960  INFO 18596 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-17 06:46:37.970  INFO 18596 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-17 06:46:38.523  WARN 18596 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-17 06:46:38.640  INFO 18596 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 06:46:38.958  INFO 18596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-17 06:47:15.859  INFO 18596 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 06:47:15.859  INFO 18596 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 06:47:15.868  INFO 18596 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-04-17 06:49:30.874  INFO 12136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-17 06:49:30.943  INFO 12136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 1 JPA repository interfaces.
+2020-04-17 06:49:31.472  INFO 12136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-04-17 06:49:31.482  INFO 12136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 06:49:31.482  INFO 12136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-17 06:49:31.706  INFO 12136 --- [main] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring embedded WebApplicationContext
+2020-04-17 06:49:31.706  INFO 12136 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1515 ms
+2020-04-17 06:49:31.927  INFO 12136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-17 06:49:32.025  INFO 12136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-17 06:49:32.212  INFO 12136 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-17 06:49:32.352  INFO 12136 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 06:49:32.474  INFO 12136 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-04-17 06:49:32.620  WARN 12136 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2020-04-17 06:49:33.192  INFO 12136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-17 06:49:33.201  INFO 12136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-17 06:49:33.560  WARN 12136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-17 06:49:33.671  INFO 12136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 06:49:33.875  INFO 12136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path '/project1'
+2020-04-17 06:49:53.013  INFO 12136 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[localhost].[/project1]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 06:49:53.014  INFO 12136 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 06:49:53.027  INFO 12136 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms

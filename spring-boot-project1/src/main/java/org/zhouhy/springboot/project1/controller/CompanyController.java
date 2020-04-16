@@ -32,4 +32,9 @@ public class CompanyController {
         return "redirect:/demo.html";
     }
 
+    @GetMapping("/sample")
+    public String testPage(){
+        return "sample";
+    }
+
 }
