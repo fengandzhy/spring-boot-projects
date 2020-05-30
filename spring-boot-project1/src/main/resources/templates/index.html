@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/fragment/fragment::commonHeader(公司)">
+</head>
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div th:replace="/fragment/fragment::leftNav"></div>
+        <div th:replace="/fragment/fragment::topNav"></div>
+        <div class="right_col" role="main">
+            <div class="">
+                <div th:replace="/fragment/fragment::rightTitle"></div>
+                <div class="clearfix"></div>
+                <div class="row" style="display: block;">这里是页面内容</div>
+            </div>
+        </div>
+
+        <footer th:replace="/fragment/fragment::footer"></footer>
+    </div>
+</div>
+<div th:include="/fragment/fragment::commJS" th:remove ="tag"></div>
+</body>
+</html>

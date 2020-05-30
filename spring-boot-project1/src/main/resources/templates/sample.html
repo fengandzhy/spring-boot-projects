@@ -7,9 +7,17 @@
         <div class="main_container">
             <div th:replace="/fragment/fragment::leftNav"></div>
             <div th:replace="/fragment/fragment::topNav"></div>
-            <div th:replace="/fragment/fragment::rightNav"></div>
+            <div class="right_col" role="main">
+                <div class="">
+                    <div th:replace="/fragment/fragment::rightTitle"></div>
+                    <div class="clearfix"></div>
+                    <div class="row" style="display: block;">这里是页面内容</div>
+                </div>
+            </div>
+
             <footer th:replace="/fragment/fragment::footer"></footer>
         </div>
     </div>
+    <div th:include="/fragment/fragment::commJS" th:remove ="tag"></div>
 </body>
 </html>

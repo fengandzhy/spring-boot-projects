@@ -41,7 +41,7 @@
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a th:href="@{/company/listCompany}">公司列表</a></li>
                             <li><a href="index2.html">Dashboard2</a></li>
                             <li><a href="index3.html">Dashboard3</a></li>
                         </ul>
@@ -248,9 +248,9 @@
         </div>
     </div>
 
-    <div class="right_col" role="main" th:fragment="rightNav">
-        <div class="">
-            <div class="page-title">
+    <!--<div class="right_col" role="main" th:fragment="rightNav">
+        <div class="">-->
+            <div class="page-title" th:fragment="rightTitle">
                 <div class="title_left">
                     <h3>Tables <small>Some examples to get you started</small></h3>
                 </div>
@@ -267,19 +267,23 @@
                 </div>
             </div>
 
-            <div class="clearfix"></div>
-            <div class="row" style="display: block;">这里是页面内容</div>
-        </div>
-    </div>
+
+        <!--</div>
+    </div>-->
 
     <footer th:fragment="footer">
         <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
         </div>
         <div class="clearfix"></div>
+    </footer>
+
+    <div th:fragment="commJS">
         <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
         <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+        <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
         <script src="/project1/jslib/gentelella/custom.min.js"></script>
-    </footer>
+    </div>
 </body>
 </html>
