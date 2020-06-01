@@ -22,4 +22,8 @@ public interface CompanyRepository extends JpaRepository<Company,String> {
     @Modifying
     @Query(value = "update t_company set company_address =?1 where company_name=?2",nativeQuery = true)
     void updateByName(String companyAddress,String companyName);
+
+    //邮箱号唯一性验证(如果已经存在，返回0，否则返回1)
+    @Query(value = "select count(*) from t_company where contactor_email=?1",nativeQuery = true)
+    int validateEmail(String email);
 }

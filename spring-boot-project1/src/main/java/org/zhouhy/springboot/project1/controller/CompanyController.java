@@ -2,13 +2,16 @@ package org.zhouhy.springboot.project1.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.zhouhy.springboot.project1.domain.Company;
 import org.zhouhy.springboot.project1.service.CompanyService;
+import org.zhouhy.springboot.project1.util.UploadFileUtil;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -23,8 +26,13 @@ public class CompanyController {
     @Resource(name="companyService")
     private CompanyService companyService;
 
+    @Autowired
+    private UploadFileUtil uploadFileUtil;
+
     @RequestMapping(value = "/save",method =  RequestMethod.POST)
+    @ResponseBody //这里必须要加@ResponseBody 如果不加就会有默认ModelandView 而且返回的路径默认是/company/save
     public void save(Company company){
+        log.info("In the method now!!!");
         companyService.Save(company);
     }
 
@@ -82,11 +90,33 @@ public class CompanyController {
 
     @GetMapping("/listCompany")
     public String page(){
-        log.info("aaaaaaaaaaaaaaaaaaaaa");
-        return "/company/ListCompany";
+        return "/company/listCompany";
     }
 
 
+    @GetMapping("/addCompanyPage")
+    public String addCompanyHtml(){
+        return "company/addCompany.html";
+    }
 
+    @RequestMapping("validateEmail")
+    @ResponseBody
+    public String validateEmail(@RequestParam String contactorEmail){
+        /**
+         * 验证邮箱是否唯一，唯一:{"valid":true},不唯一：{"valid"：false}
+         */
+        boolean blStatus=companyService.validateEmail(contactorEmail);
+        JSONObject result = new JSONObject();
+        result.put("valid", blStatus);
+        return result.toJSONString();
+    }
 
+    @PostMapping("/upload")
+    @ResponseBody
+    public String upload(@RequestParam MultipartFile file){
+        /**
+         * 接收上传文件，反馈回服务器端的文件保存路径（全路径）
+         */
+        return uploadFileUtil.receiveFile(file,"myfile");
+    }
 }

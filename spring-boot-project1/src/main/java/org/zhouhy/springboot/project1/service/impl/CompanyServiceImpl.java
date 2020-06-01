@@ -54,4 +54,11 @@ public class CompanyServiceImpl implements CompanyService {
     public Page<Company> queryDynamic(Map<String, Object> reqMap, Pageable pageable) {
         return null;
     }
+
+    @Override
+    public boolean validateEmail(String email) {
+        int intNumber=companyRepository.validateEmail(email);
+        if(intNumber==0){return true;}
+        else{return false;}
+    }
 }

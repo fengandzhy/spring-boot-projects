@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/fragment/fragment::commonHeader(公司)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title text="网站后台首页"></title>
+    <script type="text/javascript" data-main="/project1/jscustomer/company/listCompany.js" src="https://cdn.bootcss.com/require.js/2.3.6/require.min.js"></script>
 </head>
 <body class="nav-md">
 <div class="container body">
@@ -11,14 +15,30 @@
             <div class="">
                 <div th:replace="/fragment/fragment::rightTitle"></div>
                 <div class="clearfix"></div>
-                <table id="tb_Company"></table>
+                <span class="text-mute"><strong>公司管理 > 公司列表</strong></span>
+
+                <div class="row" style="margin: 1px;padding: 1px">
+                    <!--新增按钮-->
+                    <div class="col-md-3">
+                        <button id="btn_add" type="button" class="btn btn-success btn-sm">
+                            <i class="fa fa-plus"></i> 新增公司
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <table id="tb_Company" style="cursor:pointer"></table>
+                    </div>
+                    <div class="col-md-3">
+                        <span id="detail_Company"></span>
+                    </div>
+                </div>
             </div>
         </div>
 
         <footer th:replace="/fragment/fragment::footer"></footer>
     </div>
 </div>
-<div th:include="/fragment/fragment::commJS" th:remove ="tag"></div>
-<script src="/project1/jscustomer/company/ListCompany.js"></script>
 </body>
 </html>

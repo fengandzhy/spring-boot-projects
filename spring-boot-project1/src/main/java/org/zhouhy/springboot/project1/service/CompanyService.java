@@ -28,4 +28,7 @@ public interface CompanyService {
     //多条件动态查询
     Page<Company> queryDynamic(Map<String,Object> reqMap, Pageable pageable);
 
+    //验证邮箱唯一性
+    boolean validateEmail(String email);
+
 }
