@@ -15,7 +15,7 @@ require(
                     }
                 };
                 $('#tb_Company').bootstrapTable({
-                    url: '/project1/company/findAllSimplePageMap',         //请求后台的URL（*）
+                    url: '/project1/company/queryDynamic',         //请求后台的URL（*）
                     method: 'post',                      //请求方式（*）post/get
                     //striped: true,                      //是否显示行间隔色
                     classes:"table table-bordered table-sm table-hover",//启用bootstrap的表格样式 table-sm 是比较紧凑些的 具体的去这个网站看https://examples.bootstrap-table.com/#options/table-classes.html
@@ -83,9 +83,9 @@ require(
                             page: (params.offset / params.limit),//页码
 
                             // //页面的查询条件
-                            // comname:$("#comname").val(),
-                            // employeenumber:$("#employeenumber").val(),
-                            // comstatus:$("#comstatus").val()
+                            companyName:$("#companyName").val(),
+                            staffAmount:$("#staffAmount").val(),
+                            companyStatus:$("#companyStatus").val()
                         };
                         return param;
                     },
@@ -168,6 +168,11 @@ require(
                             return '<i class="modify fa fa-edit fa-lg text-warning" title="修改记录"></i>&nbsp;&nbsp;&nbsp;'+'<i class="delete fa fa-close fa-lg text-danger" title="删除记录"></i>'
                         }
                     }]
+                });
+
+                //多条件查询刷新
+                $("#btnSearch").click(function(){
+                    $("#tb_Company").bootstrapTable('refresh');
                 });
 
                 $("#btn_add").on('click',function(){

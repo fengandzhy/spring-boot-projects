@@ -64,26 +64,13 @@ public class CompanyController {
         /**
          * 简单分页查询
          */
-        int page=0;
-        int size=3;
-        if(reqMap!=null)
-        {
-            if(reqMap.get("page").toString()!=null){page= Integer.parseInt(reqMap.get("page").toString());}
-            if(reqMap.get("size").toString()!=null){size= Integer.parseInt(reqMap.get("size").toString());}
-        }
-
-        List<Sort.Order> orders = new ArrayList<>();
-        orders.add(new Sort.Order(Sort.Direction.DESC,"companyName"));
-        orders.add(new Sort.Order(Sort.Direction.ASC,"companyAddress"));
+        int page=this.getPage(reqMap);
+        int size=this.getSize(reqMap);
+        List<Sort.Order> orders = getSortRule(reqMap);
 
         //以下是代码的核心点
         Page<Company> pageInfo=companyService.findAllSimplePage(PageRequest.of(page,size,Sort.by(orders)));
-        List<Company> companies =pageInfo.getContent();
-        JSONObject result = new JSONObject();//maven中配置alibaba的fastjson依赖
-        //"rows"和"total"这两个属性是为前端列表插件"bootstrap-table"服务的
-        result.put("rows", companies);
-        result.put("total",pageInfo.getTotalElements());
-        return result.toJSONString();
+        return getResult(pageInfo);
     }
 
 
@@ -118,5 +105,54 @@ public class CompanyController {
          * 接收上传文件，反馈回服务器端的文件保存路径（全路径）
          */
         return uploadFileUtil.receiveFile(file,"myfile");
+    }
+
+    @PostMapping("/queryDynamic")
+    @ResponseBody
+    public String queryDynamic(@RequestBody(required = false) Map<String,Object> reqMap){
+
+        int page=this.getPage(reqMap);
+        int size=this.getSize(reqMap);
+        List<Sort.Order> orders = getSortRule(reqMap);
+        Page<Company> pageInfo=companyService.queryDynamic(reqMap,PageRequest.of(page,size,Sort.by(orders)));
+        return getResult(pageInfo);
+    }
+
+    private List<Sort.Order> getSortRule(Map<String,Object> reqMap){
+
+
+        List<Sort.Order> orders = new ArrayList<>();
+        orders.add(new Sort.Order(Sort.Direction.DESC,"companyName"));
+        orders.add(new Sort.Order(Sort.Direction.ASC,"companyAddress"));
+        return orders;
+    }
+
+    private int getPage(Map<String,Object> reqMap){
+        int page=0;
+        if(reqMap!=null){
+            if(reqMap.get("page").toString()!=null){
+                page= Integer.parseInt(reqMap.get("page").toString());
+            }
+        }
+        return page;
+    }
+
+    private int getSize(Map<String,Object> reqMap){
+        int size=3;
+        if(reqMap!=null){
+            if(reqMap.get("size").toString()!=null){
+                size= Integer.parseInt(reqMap.get("size").toString());
+            }
+        }
+        return size;
+    }
+
+    private String getResult(Page<Company> pageInfo){
+        List<Company> companies =pageInfo.getContent();
+        JSONObject result = new JSONObject();//maven中配置alibaba的fastjson依赖
+        //"rows"和"total"这两个属性是为前端列表插件"bootstrap-table"服务的
+        result.put("rows", companies);
+        result.put("total",pageInfo.getTotalElements());
+        return result.toJSONString();
     }
 }

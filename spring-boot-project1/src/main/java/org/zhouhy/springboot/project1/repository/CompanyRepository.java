@@ -1,6 +1,7 @@
 package org.zhouhy.springboot.project1.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,7 +10,7 @@ import org.zhouhy.springboot.project1.domain.Company;
 import java.util.List;
 
 @Repository
-public interface CompanyRepository extends JpaRepository<Company,String> {
+public interface CompanyRepository extends JpaRepository<Company,String>, JpaSpecificationExecutor {
 
     //原生sql语句查询
     @Query(value="select * from t_company where company_name=?1",nativeQuery = true)
@@ -26,4 +27,6 @@ public interface CompanyRepository extends JpaRepository<Company,String> {
     //邮箱号唯一性验证(如果已经存在，返回0，否则返回1)
     @Query(value = "select count(*) from t_company where contactor_email=?1",nativeQuery = true)
     int validateEmail(String email);
+
+
 }

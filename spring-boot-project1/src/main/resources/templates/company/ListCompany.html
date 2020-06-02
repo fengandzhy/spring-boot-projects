@@ -24,6 +24,29 @@
                             <i class="fa fa-plus"></i> 新增公司
                         </button>
                     </div>
+
+                    <!--查询条件-->
+                    <div CLASS="col-md-9">
+                        <form class="form-inline  pull-right">
+                            <label for="companyName">公司名称：</label>
+                            <input type="text" class="form-control input-sm" id="companyName" name="companyName" placeholder="如：遨游" style="width: 200px;margin-right: 15px">
+
+                            <label for="staffAmount">员工人数大于：</label>
+                            <input type="text" class="form-control input-sm" id="staffAmount" name="staffAmount" placeholder="0" style="width: 200px;margin-right: 15px">
+
+                            <label for="companyStatus">运营状态：</label>
+                            <select class="form-control" id="companyStatus">
+                                <option value="全部">全部</option>
+                                <option value="正常运营">正常运营</option>
+                                <option value="正在注销">正在注销</option>
+                                <option value="已经注销">已经注销</option>
+                            </select>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <button type="button" class="btn btn-secondary btn-sm" id="btnSearch">
+                                <i class="fa fa-search"></i> 查 询
+                            </button>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="row">
