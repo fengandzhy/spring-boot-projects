@@ -10,11 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.zhouhy.springboot.project1.domain.Company;
+import org.zhouhy.springboot.project1.domain.EchartsData;
 import org.zhouhy.springboot.project1.service.CompanyService;
 import org.zhouhy.springboot.project1.util.UploadFileUtil;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -82,15 +84,12 @@ public class CompanyController {
 
     @GetMapping("/addCompanyPage")
     public String addCompanyHtml(){
-        return "/company/addCompany.html";
+        return "/company/addCompany";
     }
 
-    @RequestMapping("chartHtml")
+    @GetMapping("/chartHtml")
     public String chartHtml(){
-        /**
-         * 返回公司图表展示页面
-         */
-        return "/company/companyChart.html";
+        return "/company/companyChart";
     }
 
 
@@ -119,7 +118,6 @@ public class CompanyController {
     @PostMapping("/queryDynamic")
     @ResponseBody
     public String queryDynamic(@RequestBody(required = false) Map<String,Object> reqMap){
-
         int page=this.getPage(reqMap);
         int size=this.getSize(reqMap);
         List<Sort.Order> orders = getSortRule(reqMap);
@@ -128,10 +126,39 @@ public class CompanyController {
     }
 
 
+    /**
+     * 返回一个map
+     * */
+    @PostMapping("/chart")
+    @ResponseBody
+    public Map<String,List<EchartsData>> chart()
+    {
+        /**
+         * 为Echarts图表展示，准备数据
+         * 这里反馈回回聊员工数量、营业收入两个集合，并赋值给map集合
+         */
+        Map<String,List<EchartsData>> map = new HashMap<>();
+
+        List<EchartsData> listEmployeenumber=new ArrayList<EchartsData>();//数据集合，员工数量
+        List<EchartsData> listTotaloutput=new ArrayList<EchartsData>();//数据集合，营业收入
+        List<Company> list=companyService.findAll();
+
+        // 组装数据
+        for (Company company:list)
+        {
+            listEmployeenumber.add(new EchartsData(company.getCompanyName(),company.getStaffAmount()));
+            listTotaloutput.add(new EchartsData(company.getCompanyName(),company.getTotalOutput()));
+        }
+
+        //赋值给Map集合 KEY,VALUE
+        map.put("listperson",listEmployeenumber);
+        map.put("listoutput",listTotaloutput);
+
+        return map;
+    }
+
 
     private List<Sort.Order> getSortRule(Map<String,Object> reqMap){
-
-
         List<Sort.Order> orders = new ArrayList<>();
         orders.add(new Sort.Order(Sort.Direction.DESC,"companyName"));
         orders.add(new Sort.Order(Sort.Direction.ASC,"companyAddress"));
