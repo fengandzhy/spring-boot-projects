@@ -45,8 +45,8 @@ public class CompanyController {
 
     @PostMapping("/findAllSimplePage")
     @ResponseBody
-    public Page<Company> findAllSimplePage(@RequestParam(name="page",required=false,defaultValue = "1") int page, @RequestParam(name="size",required=false,defaultValue = "2") int size)
-    {
+    public Page<Company> findAllSimplePage(@RequestParam(name="page",required=false,defaultValue = "1") int page,
+                                           @RequestParam(name="size",required=false,defaultValue = "2") int size){
         /**
          * 多条件排序及分页查询
          */
@@ -59,8 +59,7 @@ public class CompanyController {
 
     @PostMapping("/findAllSimplePageMap")
     @ResponseBody
-    public String findAllSimplePageMap(@RequestBody(required = false) Map<String,Object> reqMap)
-    {
+    public String findAllSimplePageMap(@RequestBody(required = false) Map<String,Object> reqMap){
         /**
          * 简单分页查询
          */
@@ -83,8 +82,18 @@ public class CompanyController {
 
     @GetMapping("/addCompanyPage")
     public String addCompanyHtml(){
-        return "company/addCompany.html";
+        return "/company/addCompany.html";
     }
+
+    @RequestMapping("chartHtml")
+    public String chartHtml(){
+        /**
+         * 返回公司图表展示页面
+         */
+        return "/company/companyChart.html";
+    }
+
+
 
     @RequestMapping("validateEmail")
     @ResponseBody
@@ -117,6 +126,8 @@ public class CompanyController {
         Page<Company> pageInfo=companyService.queryDynamic(reqMap,PageRequest.of(page,size,Sort.by(orders)));
         return getResult(pageInfo);
     }
+
+
 
     private List<Sort.Order> getSortRule(Map<String,Object> reqMap){
 
