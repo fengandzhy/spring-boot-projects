@@ -17,6 +17,7 @@ require.config({
         bootstrap_validator_CN:['https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/language/zh_CN.min'],
         jqueryform:['https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min'],
         jqueryupload:['/project1/jslib/JQuery.upload/jQuery.upload.min'],
+        ztree:['/project1/jslib/zTree_v3/js/jquery.ztree.all']
     },
     map:{
         '*':{css:['https://cdn.bootcss.com/require-css/0.1.10/css.min.js']} //这里的CSS是id
@@ -51,6 +52,9 @@ require.config({
         },
         jqueryupload:{
             deps:['jquery','css!/project1/jslib/JQuery.upload/upload.css']
+        },
+        ztree:{
+            deps:['jquery','css!/project1/jslib/zTree_v3/css/zTreeStyle/zTreeStyle.css']
         }
     }
 })

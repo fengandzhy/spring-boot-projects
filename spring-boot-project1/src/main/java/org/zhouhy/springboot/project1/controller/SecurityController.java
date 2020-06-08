@@ -32,17 +32,17 @@ public class SecurityController {
     @Resource(name="authService")
     private AuthService authService;
 
-    @RequestMapping("/ListUserRoleAuthHTML")
+    @RequestMapping("/security.html")
     public String findAllRole(Model model){
         /**
          * 查询全部的角色，然后跳转到页面，利用了Thymeleaf模板中的迭代器进行页面数据的输出
          */
         List<Role> list=roleService.findALL();
         model.addAttribute("sysRoles",list);
-        return "security/ListUserRoleAuth.html";
+        return "/security/security.html";
     }
 
-    @PostMapping("/listuser")
+    @PostMapping("/user_list")
     @ResponseBody
     public String queryDynamic(@RequestBody Map<String,Object> reqMap){
         /**
@@ -68,10 +68,9 @@ public class SecurityController {
 
 
 
-    @RequestMapping("/listauth")
+    @RequestMapping("/auth_list")
     @ResponseBody
-    public List<Ztree> findALLToZtree(String roleid)
-    {
+    public List<Ztree> findALLToZtree(String roleid){
         /**
          * 返回全部权限（zTree结构形式的树形节点）
          */
@@ -79,7 +78,7 @@ public class SecurityController {
     }
 
     //保存角色
-    @PostMapping("/saveRole")
+    @PostMapping("/role_create")
     @ResponseBody
 
     public String save(Role sysRole){
@@ -88,7 +87,7 @@ public class SecurityController {
     }
 
     //删除角色
-    @PostMapping("/deleteRole")
+    @PostMapping("/role_delete")
     @ResponseBody
     public String deleteRole(String uuid){
         roleService.deleteByUuid(uuid);
@@ -97,14 +96,14 @@ public class SecurityController {
     }
 
     //保存子节点（需要判断是否有重复，如果没有重复,保存信息,id是当前选定节点的id，name是需要新增加子节点的名称）
-    @PostMapping("/saveChildAuth")
+    @PostMapping("/child-auth_save")
     @ResponseBody
     public String saveChildAuth(@RequestParam int id, String name){
         return authService.saveChildAuth(id,name);
     }
 
     //根据节点的id删除节点及子节点
-    @PostMapping("/deleteByChild")
+    @PostMapping("/auth_delete-by-child")
     @ResponseBody
     public String deleteByChild(@RequestParam int id){
         authService.deleteByChild(id);
@@ -112,7 +111,7 @@ public class SecurityController {
     }
 
     //保存角色对应的权限信息,其中‘authinfo’是以$分割的节点id字符串
-    @PostMapping("/editRole")
+    @PostMapping("/role_edit")
     @ResponseBody
     public String editRole(@RequestParam String uuid,String authinfo){
         authService.editRole(uuid,authinfo);
@@ -120,7 +119,7 @@ public class SecurityController {
     }
 
     //查询全部的角色(填充添加用户中的下拉列表)
-    @RequestMapping("/findAllRoles")
+    @RequestMapping("/role_all")
     @ResponseBody
     public List<Role> findAllRoles(){
         List<Role> list=roleService.findALL();
@@ -128,7 +127,7 @@ public class SecurityController {
     }
 
     //用户名唯一性验证(如果已经存在，返回false，否则返回true；返回json数据，格式为{"valid",true})
-    @PostMapping("/validateUsername")
+    @PostMapping("/username_validate")
     @ResponseBody
     public String validateUsername(@RequestParam String username){
         boolean blStatus=userService.validateUsername(username);
@@ -138,7 +137,7 @@ public class SecurityController {
     }
 
     //邮箱号唯一性验证(如果已经存在，返回false，否则返回true；返回json数据，格式为{"valid",true})
-    @PostMapping("/validateEmail")
+    @PostMapping("/email_validate")
     @ResponseBody
     public String validateEmail(@RequestParam String useremail){
         boolean blStatus=userService.validateEmail(useremail);
@@ -148,7 +147,7 @@ public class SecurityController {
     }
 
     //手机号唯一性验证(如果已经存在，返回false，否则返回true；返回json数据，格式为{"valid",true})
-    @PostMapping("/validateMobile")
+    @PostMapping("/mobile_validate")
     @ResponseBody
     public String validateMobile(@RequestParam String usermobile){
         boolean blStatus=userService.validateMobile(usermobile);
@@ -158,11 +157,16 @@ public class SecurityController {
     }
 
     //返回AddSysUser.html页面
-    @RequestMapping("/ridirectAddSysUserHtml")
+    @RequestMapping("/user_create.html")
     public String ridirectAddSysUserHtml(){
-        return "security/AddSysUser.html";
+        return "security/user_create.html";
     }
 
-
-
+    //保存系统账户
+    @RequestMapping("/user_create")
+    @ResponseBody
+    public String saveSysUser(User sysUser){
+        userService.save(sysUser);
+        return "OK";
+    }
 }
